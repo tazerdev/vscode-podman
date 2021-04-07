@@ -61,7 +61,7 @@ podman run -it --rm -u 0 -e DISPLAY=$DISPLAY \
        -v /home/youruser/.config/Code:/root/.config/Code:rw \
        -v /home/youruser/.vscode:/root/.vscode:rw \
        -v /data/git:/data/git:rw \
-       localhost/vscode bash
+       localhost/vs-code bash
 ```
 
 Then launch code from within the container:
