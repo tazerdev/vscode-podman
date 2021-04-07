@@ -39,7 +39,7 @@ This is primarily for python development, other dependencies will need to be add
 cat > Dockerfile << EOF
 FROM registry.access.redhat.com/ubi8/ubi:latest
 COPY microsoft-vscode.repo /etc/yum.repos.d/microsoft-vscode.repo
-RUN yum -y install code libX11-xcb python2 python2-devel python38 python38-devel git && yum clean all
+RUN yum -y install code libX11-xcb python2 python2-devel python38 python38-devel git openssh-askpass && yum clean all
 RUN mkdir -p /data/git
 CMD ["/usr/bin/code", "--user-data-dir=/root/.config/Code"]
 EOF
