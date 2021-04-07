@@ -58,8 +58,8 @@ Replace /data/git with a mountpoint where your existing git repos exist or where
 ```bash
 podman run -it --rm -u 0 -e DISPLAY=$DISPLAY \
        -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
-       -v /home/youruser/.config/Code:/root/.config/Code:rw \
-       -v /home/youruser/.vscode:/root/.vscode:rw \
+       -v ~/.config/Code:/root/.config/Code:rw \
+       -v ~/.vscode:/root/.vscode:rw \
        -v /data/git:/data/git:rw \
        localhost/vs-code bash
 ```
